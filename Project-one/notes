@@ -34,3 +34,6 @@ We can use () to name a group which can have multiple pages but become part of r
 example: 
 app>dashboard>(auth)>login and register
 routes: localhost:3000/dashboard/login or register
+
+<!-- Next.js layout and components:  -->
+
