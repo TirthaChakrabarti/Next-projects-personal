@@ -1,0 +1,36 @@
+<!-- Next.js -->
+Most popular React framework that is used for building server-rendered web applications
+
+<!-- Reasons to use: -->
+
+1) New stable app router: 
+we can create all the pages using a single folder. Every child folder in app rounter represents a new page. SO really easy to create and group pages. [React needs to install a library and create a custom router]
+
+2) Full stack apps with Next.js API:
+We can have our own APIs. We can create APIs using folder structure and handle requests in Routes file. [For React, a separate app with a separate framework like Express.js is needed]
+
+3) Server-side and Client-side rendering:
+Most important feature. It can have both together. We can fetch data in server side and improve the SEO of the app and also create client side components to interact with users
+
+4) Next.js optimization:
+Also called 'splitting'- splits bundle of the application into some chunks and serves them to users only when needed thus improves application's initial load time (?). 
+Also Next.js automatically optimizes images by compressing them and generating different sizes for different device resolutions
+
+<!-- Next.js Routing (App directory): -->
+
+App directory represents Homepage. This will have sub-folders which will have files. They represent others pages grouped in corresponding folders.
+
+Example: 
+app > dashboard, about, blog
+dashboard > login, settings, analytics
+blog > my-first-post, my-second-post, my-third-post 
+
+This way there is a simple tree. 
+We can have dynamic names for each blog post: /blog/[postId]
+
+<!-- Grouping multiple pages:  -->
+
+We can use () to name a group which can have multiple pages but become part of route
+example: 
+app>dashboard>(auth)>login and register
+routes: localhost:3000/dashboard/login or register
