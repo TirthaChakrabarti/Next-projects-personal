@@ -51,3 +51,29 @@ Example: blog layout appears in blog page and all individual blogs as well
 
 In Next.js, all components render on Server-side by default
 To change that, we can use "use client" directive
+
+CSR:
+-Client sends request to server
+-Server responds with a HTML file and bundles of JavaScript
+-Browser processes the bundles and renders the final HTML file
+
+*Initial page loading speed can be slow
+*As the page is built on the client side, the browser cannot index the side properly (so SEO not possible)
+
+SSR:
+-Server receives the request
+-renders the HTML page and sends to browser
+
+*Initial page loading is faster as browser doesn't have to render the page
+*Interaction with the user is not possible
+\*To create an event, we have to create a client-side component
+\*Browser can do SEO through indexing
+
+Example: an onClick fucntion for login/logout button will work only if the component is directed to 'use client'
+
+<!-- Next.js styling (Global and module CSS) -->
+
+Global CSS is used for styling the common elements
+For page-specific styles, we can use either Global CSS itself (not desirable) or a CSS file specific to that page
+[even presence of same classname in Global file and page-specific file will not create any conflict]
+[A new class name for the page-specific style is automatically generated which avoids conflict]
