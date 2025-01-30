@@ -77,3 +77,9 @@ Global CSS is used for styling the common elements
 For page-specific styles, we can use either Global CSS itself (not desirable) or a CSS file specific to that page
 [even presence of same classname in Global file and page-specific file will not create any conflict]
 [A new class name for the page-specific style is automatically generated which avoids conflict]
+
+<!-- Next.js Image -->
+
+Conventional HTML images may take longer loading time and higher bandwidth. Next.js Image modifies the images under the hood. It adds lazy loading, arranges its sizes etc.
+[Next.js uses 'Lazy loading']
+[Height and Width are mandatory properties]

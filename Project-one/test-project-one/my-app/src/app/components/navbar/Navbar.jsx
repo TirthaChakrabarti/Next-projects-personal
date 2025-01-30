@@ -50,16 +50,22 @@ const Navbar = () => {
             {link.title}
           </Link>
         ))}
+        <button
+          className={styles.logout}
+          onClick={() => console.log("Logged out")}
+        >
+          Logout
+        </button>
       </div>
-      <button className={styles.login} onClick={() => console.log("Logged in")}>
+      {/* <button className={styles.login} onClick={() => console.log("Logged in")}>
         Login
-      </button>
-      <button
+      </button> */}
+      {/* <button
         className={styles.logout}
         onClick={() => console.log("Logged out")}
       >
         Logout
-      </button>
+      </button> */}
     </div>
   );
 };
