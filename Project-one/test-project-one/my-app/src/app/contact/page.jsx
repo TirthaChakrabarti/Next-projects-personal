@@ -8,15 +8,15 @@ const Contact = () => {
       <h1 className={styles.title}>Let's keep in touch!</h1>
       <div className={styles.content}>
         <div className={styles.imgContainer}>
-          {/* <img
-            src="./hero-section/hero-image.jpg"
+          <img
+            src="./contact-page/contact.jpg"
             alt="Hero Section Image"
             className={styles.img}
-          /> */}
+          />
         </div>
         <form className={styles.form}>
-          <input type="text" placeholder="name" className={styles.input} />
-          <input type="text" placeholder="email" className={styles.input} />
+          <input type="text" placeholder="Name" className={styles.input} />
+          <input type="text" placeholder="Email" className={styles.input} />
           <textarea
             className={styles.textArea}
             placeholder="Message"

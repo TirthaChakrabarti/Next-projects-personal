@@ -1,28 +1,63 @@
 .container {
-  /* border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
-  align-items: center; */
+  align-items: center;
+  width: 100%;
 }
 
 .title {
   font-size: 40px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   text-align: center;
+  background: linear-gradient(to bottom, #194c33, #eae9e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .content {
   display: flex;
   align-items: center;
-  gap: 10px;
-  width: 10vw;
+  justify-content: space-between;
+  gap: 20px;
+  width: 80vw;
+  padding: 20px;
 }
 
 .imgContainer {
   flex: 1;
-  height: 500px;
   position: relative;
-  /* color: white; */
+  padding-bottom: 50px;
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 50%;
+  animation: move 8s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg) scale(1.06);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg) scale(0.93);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .form {
@@ -30,13 +65,16 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 
 .input,
 .textArea {
-  padding: 20px;
+  padding: 15px;
   background-color: transparent;
-  border: none;
+  border: 1px solid #bbb;
   outline: none;
   color: #bbb;
+  width: 100%;
+  font-weight: bold;
 }

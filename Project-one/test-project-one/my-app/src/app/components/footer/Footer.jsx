@@ -5,13 +5,13 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div>All Rights Reserved</div>
-      <div className={styles.logos}>
-        {/* <Image
+      {/* <div className={styles.logos}>
+        <Image
           src="./footer-logos/fb-logo.webp"
           width={15}
           height={15}
           alt="MyApp"
-        /> */}
+        />
         <img
           src="./footer-logos/fb-logo.webp"
           alt="Facebook Logo"
@@ -36,7 +36,7 @@ const Footer = () => {
           width={30}
           height={30}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

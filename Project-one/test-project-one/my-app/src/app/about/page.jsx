@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-        <img src="./hero-section/about-banner.jpg" alt="" />
+        <img src="/about-page/about.jpg" alt="" />
         <div className={styles.imgText}>
           <h1 className={styles.imgTitle}>Digital Storyteller</h1>
           <h2 className={styles.imgDesc}>
@@ -31,7 +31,7 @@ const About = () => {
           </p>
         </div>
         <div className={styles.item}>
-          <h1 classname={styles.title}>What we do?</h1>
+          <h1 className={styles.title}>What we do?</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
             id error asperiores iusto doloremque amet dicta delectus blanditiis
