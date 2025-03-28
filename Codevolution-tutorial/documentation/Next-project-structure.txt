@@ -1,0 +1,21 @@
+Next project initially has 4 folders and 10 files [9 for me: tailwind.config.ts is absent]
+(after starting with 'npm run dev')
+
+1) package.json: 
+    It has all dependencies and scripts 
+
+- dev : For development mode 
+- build : For production builds
+- start : For running the production server 
+- lint : For setting up Next's built-in Eslint configuration 
+
+2,3,4,5) Configuration files for Next, Typescript, TailwindCSS and Eslint 
+
+6) package-lock.json:
+    Ensures consistent installation of dependencies 
+
+7) gitignore:
+    For version control 
+
+8) README.md:
+    Contains few instructions related to running, building and deploying the application 

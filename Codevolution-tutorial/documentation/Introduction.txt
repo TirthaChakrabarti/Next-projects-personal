@@ -1,0 +1,61 @@
+Next.js: 
+A React framework for building full-stack web application
+
+*Limitation of React:
+
+-React is a library for building user interfaces (View layer)
+-Using React, it is not feasible to create a fully-featured appplication ready for production
+React
+-We need more features like Routing, Data fetching and more 
+
+*Next.js uses React for building user interfaces and also provides additional features that enable us to build production ready applications. No additional packages needed.
+
+Features include:
+    - Routing
+    - Optimized rendering
+    - Data fetching 
+    - Bundling 
+    - Compiling
+      etc.
+
+*Next.js being a framework has opinions and conventions
+
+-----------------
+
+Next.js simplifies the process of building production-ready web applications:
+
+- Routing: 
+    React needs installing and configuring 3rd party routing packages everytime it needs to create the route
+    Next.js simplifies this with files-based routing 
+    [Create files and routes are automatically generated]
+
+- API routes:
+    Next.js is a full-stack framework: 
+    Can build frontend React components and backend APIs within same Next.js application 
+    Ensures seemless integration between frontend and backend code
+
+- Rendering:
+    Both Server-side and Client-side rendering is possible
+    Leads to improves performance and better Search Engine Optimization (SEO)
+
+- Data fetching:
+    Streamlined data fetching through built-in async-await support in React component 
+    Makes data fetching straightforward and efficient
+
+- Styling:
+    Flexible with styling approaches 
+    Supports CSS modules, TailwindCSS, CSS and JS solutions etc. 
+
+- Optimization: 
+    Provides out-of-the-box Optimization for images, fonts and scripts
+    Thus enhances the application's core web vitals and overall user experience
+
+- Dev and Prod build system 
+    Optimized development and production-build system 
+    We can focus on building codes instead of dealing with complex configurations
+
+-----------------
+
+**We need Node.js to run Next.js (Version 18.18 or later)
+
+-----------------
