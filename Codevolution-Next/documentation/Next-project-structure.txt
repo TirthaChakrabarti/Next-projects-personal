@@ -1,6 +1,10 @@
 Next project initially has 4 folders and 10 files [9 for me: tailwind.config.ts is absent]
 (after starting with 'npm run dev')
 
+-------------------
+
+Files: 
+
 1) package.json: 
     It has all dependencies and scripts 
 
@@ -11,11 +15,54 @@ Next project initially has 4 folders and 10 files [9 for me: tailwind.config.ts 
 
 2,3,4,5) Configuration files for Next, Typescript, TailwindCSS and Eslint 
 
-6) package-lock.json:
+6) package-lock.json: 
     Ensures consistent installation of dependencies 
 
-7) gitignore:
+7) gitignore: 
     For version control 
 
-8) README.md:
+8) README.md: 
     Contains few instructions related to running, building and deploying the application 
+
+9) next-env.d.ts: 
+    For Typescript declarations for Next.js 
+
+-----------------
+
+Folders: 
+
+1) .next: 
+    Gets created when dev/build is run. Next app is served from here
+    [This is gitignored so not much to worry about it during development]
+
+2) node_modules:
+    Home of all our installed dependencies 
+    Gets created by 'npm install' or when we run the dev script which handles the installations automatically in needed
+    [This is also gitignored]
+
+3) public: 
+    All static assets like images and svgs go here 
+
+4) Source:
+    It has the 'app' folder [App router]
+    It has 4 files:
+
+    - favicon : Browser tab icon 
+    - global.css : Application-wide styles
+    - layout.tsx : Shared UI elements across pages 
+    - page.tsx : 
+            creates what we see at localhost:3000
+            Home component is defined here 
+            Slots into layout.tsx as children props
+
+--------------------------------
+
+Control flow:
+
+npm run dev > 
+starts from package.json >
+layout.tsx >
+renders RootLayout component >
+looks for page.tsx at 'app' folder (for localhost:3000) >
+gets Home component at page.tsx >
+renders it inside RootLayout
