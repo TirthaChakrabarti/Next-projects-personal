@@ -1,26 +1,44 @@
-React Server Component (RSC): 
+Next.js has a file-system based routing system:
+    URLs we access in our browser are determined by how we organize our files and folders in our code
 
-A new architecture introduced by React team and quickly adopted by Next.js 
+Routing conventions:
 
-It is a new approach to creating React components by dividing into two distinc types:
-    - Server components
-    - Client components 
+1. All routes must live inside the App folder
+2. Route files must be names page.js/page.tsx
+3. Each folder represents a segment of the URL path 
 
-Server components:
+When these conventions are followed, the file automatically becomes available as a route 
 
-- By default, Next.js treats all components as Server components
-- These components can perform server-side tasks like reading files or fetching data directly from a Database
-- The trade-off is that they can't use React hooks or handle user interactions 
+Example: 
+page.tsx file inside App folder automatically maps to our site's root URL 
 
-Client components: 
+Creating Routes:
 
-- To create a Client component, add "use client" directive at the top of component file
+1) app/page.tsx - localhost:3000/
+2) app > about/page.tsx - localhost:3000/about 
+3) app > profile/page.tsx - locanhost:3000/profile 
 
-- Client components cannot perform server-side tasks like reading files 
-- They can use hooks and handle user interactions
-- They are the traditional React components we're familier with from previous versions of React 
+Non-existing routes are automatically handles by Next.js (a 404: Not Found page)
+We don't need to manually write any code to handle this error although we can have customized page for this [not-found.tsx in this project]
 
-React Server Components and Routing:
+** This way Next.js file-based routing does the heavy-lifting.
+** We don't need to install and configure Router unlike React.js 
+[This is Next's 'Convention over Configuration' philosophy when it comes to Routing]
 
-We work with server components that wait for certain operations to complete before rendering content
-We use client components to take advantage of hooks from the routing module
+// Nested Routes:    
+app > blog > - first > page.tsx 
+app > blog > - second > page.tsx 
+
+// Dynamic Routes:   
+app > products > [productId] > page.tsx 
+
+// Nested Dynamic Routes:   
+app > products > [productId] > reviews > [reviewId] > page.tsx 
+
+// Catch-all segments: 
+app > docs > [...slug]     
+(will match any URL with 'docs' in the path)
+(Example: localhost:3000/docs/lecture/topic1/point2...)
+
+- To access various URL segments in the code, we use param
+- To make slug section optional, use two [] so that docs page is also shown (Error!!!)
