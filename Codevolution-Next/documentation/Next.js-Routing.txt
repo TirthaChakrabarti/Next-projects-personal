@@ -9,4 +9,29 @@ Routing conventions:
 
 When these conventions are followed, the file automatically becomes available as a route 
 
-Example: page.tsx file inside App folder altomatically maps to our site's root URL 
+Example: 
+page.tsx file inside App folder automatically maps to our site's root URL 
+
+Creating Routes:
+
+1) app/page.tsx - localhost:3000/
+2) app > about/page.tsx - localhost:3000/about 
+3) app > profile/page.tsx - locanhost:3000/profile 
+
+Non-existing routes are automatically handles by Next.js (a 404: Not Found page)
+We don't need to manually write any code to handle this error
+
+** This way Next.js file-based routing does the heavylifting.
+** We don't need to install and configure Router unlike React.js 
+[This is Next's 'Convention over Configuration' philosophy when it comes to Routing]
+
+// Nested Routes 
+
+app > blog > - first > page.tsx 
+             - second > page.tsx 
+
+// Dynamic Routes 
+
+app > products > [productId] > page.tsx 
+
+// Nested Dynamic Routes 
