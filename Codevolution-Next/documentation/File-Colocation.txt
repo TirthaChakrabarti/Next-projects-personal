@@ -1,0 +1,26 @@
+// File Colocation 
+-------------------
+
+We can savely co-locate project files inside Route segments in the App directory without worrying about them accidentally becoming routes themselves
+
+Example: dashboard folder and page.tsx file 
+
+[We can have files outside of the App folder as well]
+
+// Private folders 
+-------------------
+
+This is for internal stuff. 
+This folder and all its sub-folders are excluded from Routing.
+Add an underscore at the start of folder name to create a private folder 
+This is where we may keep utility functions like format-date.ts 
+
+Private folder are super useful for:
+
+-Keeping UI logic separate from Routing logic 
+-Having a consistent way to organize internal files in the project 
+-Making it easier to group related files in our code editor
+-Avoiding potential naming conflicts with future Next.js file naming conventions
+
+[To have an underscore in URL, we can use "%5F" instead. That's URL-encoded version of an underscore]
+

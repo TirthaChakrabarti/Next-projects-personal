@@ -8,3 +8,4 @@ Example: not-found used in product review in this project
 
 **NotFound() function dosn't take any parameter
 To make the messaging dynamic for it (depending on route parameter), we have to use usePathName hook from Next.js
+[example: not-found.tsx in [reviewId] folder]

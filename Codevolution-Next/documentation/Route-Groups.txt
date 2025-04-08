@@ -1,0 +1,18 @@
+Another feature to organize the project
+- Lets us logically organize our routes and files without impacting URL structure
+- They are the only way to share layout between Routes without affecting the URL 
+
+Example: 
+
+- Register
+- Login
+- Forgot Password
+
+We group them in 'auth' folder 
+URL path becomes: 
+app > auth > register/forget-password/login
+
+**But if we don't want to keep wrapper folder in URL path (because not ideal for all scenarios), wrapper folder will be placed in (). Next.js consider it as an organizational tool only and excludes it from URL path.
+
+**Route groups can be nested
+
