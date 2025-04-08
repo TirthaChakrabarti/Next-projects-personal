@@ -1,0 +1,10 @@
+Non-existing routes are automatically handles by Next.js (a 404: Not Found page)
+We don't need to manually write any code to handle this error
+
+*Although we can have customized page for this [not-found.tsx in this project]
+
+We can also trigger it programatically using not-found function
+Example: not-found used in product review in this project 
+
+**NotFound() function dosn't take any parameter
+To make the messaging dynamic for it (depending on route parameter), we have to use usePathName hook from Next.js

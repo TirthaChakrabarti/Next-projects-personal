@@ -18,9 +18,6 @@ Creating Routes:
 2) app > about/page.tsx - localhost:3000/about 
 3) app > profile/page.tsx - locanhost:3000/profile 
 
-Non-existing routes are automatically handles by Next.js (a 404: Not Found page)
-We don't need to manually write any code to handle this error although we can have customized page for this [not-found.tsx in this project]
-
 ** This way Next.js file-based routing does the heavy-lifting.
 ** We don't need to install and configure Router unlike React.js 
 [This is Next's 'Convention over Configuration' philosophy when it comes to Routing]
