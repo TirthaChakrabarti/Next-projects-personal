@@ -1,0 +1,37 @@
+The Metadata API in Next.js is a powerful feature that lets us define metadata for each page.
+Metadata ensures our content looks great when it's shared or indexed by search engines.
+
+Two ways to handle metadata in layout.tsx or page.tsx files:
+
+- Export s static metadata object
+- Export a dynamic generateMetadata function
+
+**Configuring Routing Metadata:
+
+Matadata rules:
+--------------
+
+- Both layout.tsx and page.tsx export metadata. Layout metadata applies to all its pages, while page metadata is specific to that page
+
+- Metadata follows a top-down order, starting from the root level
+
+- When metadata exists in multiple places along a route, they merge together, with page metadata overriding layout metadata for matching properties
+[Deeper component gets priority]
+
+Example:
+In this project, localhost:3000 shows metadata as in Rooy layout 
+But, for localhost:3000/about page, title is replaced with its own metadata title (description is intact and about page doesn't have description metadata)
+
+
+Dynamic Metadata:
+-----------------
+
+It comes in handy when the metadata depends on dynamic information like current route parameters, external data or metadata defined in parant segment
+
+- Both layout.tsx and page.tsx can generate it by exporting a generateMetadata 
+
+Example: 
+We defined one in [productId]'s page.tsx
+
+**We cannot use a static Metadata object and dynamic generateMetadata function in the same Route segment 
+It is either this or that.

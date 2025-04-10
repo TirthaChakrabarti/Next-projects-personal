@@ -10,7 +10,35 @@ It is not optional. It's so mandatory that Next.js automatically re-creates it e
 When we visit root URL (localhost:3000), root layout component in layout.tsx in App folder gets rendered. Its children prop gets replaced with the component defined in page.tsx in App folder. Similarly, if we visit any other route, its own page.tsx replaces the children prop.
 
 
-Nested Layout : 
+Nested Layout: 
 --------------
 
 These are layouts defined in sub-folders of App folder 
+
+Example: 
+
+localhost:3000 - Root layout takes Root page.tsx as children prop
+localhost:3000/products - Root layout takes products' page.tsx as children prop 
+localhost:3000/products/[productId] - Root layout takes [productId]'s layout as children prop
+                                      [productId]'s layout takes [productId]'s page.tsx as children prop 
+
+
+Multiple Root Layouts:
+----------------------
+
+Route Groups helps to do it. 
+Just like Route Groups organize our project structure  without affecting URLs, they can apply layouts selectively to specific parts of our app 
+
+Example: 
+In this project, we want both header and footer for pages 'customers' and 'revenue'
+On the other hand, we want only footer for pages 'login', 'register' etc.
+
+- We can group them under 'auth' and 'marketing'
+- 'marketing' group will have its own layout (that has header and footer)
+- 'auth' group will have its own layout (that has only footer) 
+[Root layout structure can be used but will be renamed and edited for both]
+- Browser shows error as there is no Root layout now
+- Insert Root page.tsx into 'marketing' group 
+[marketing group has a layout and it has a page.tsx to work with]
+
+Now, URLs are unaffected but looks are as we wanted! 
