@@ -35,3 +35,17 @@ We defined one in [productId]'s page.tsx
 
 **We cannot use a static Metadata object and dynamic generateMetadata function in the same Route segment 
 It is either this or that.
+
+*Metadata does not work with pages marked with 'use client'
+Example: 
+counter page.tsx
+[To make it work, keep client side component as a separate component (Counter.tsx) and import that in page.tsx]
+
+
+Title Metadata:
+---------------
+
+Title field's primary purpose is to define the document title 
+It can be a String or an object 
+
+As object, there are 3 keys: template, default, absolute

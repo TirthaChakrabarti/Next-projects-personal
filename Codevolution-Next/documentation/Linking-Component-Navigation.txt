@@ -1,0 +1,4 @@
+For client-side navigation, Next.js gives us the <Link> component
+<Link> component is a React component that extends the HTML <a> element
+It's the primary way to navigate between routes in Next.js 
+We import it from Next/link
